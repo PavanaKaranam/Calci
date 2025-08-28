@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/fmu2ygz.css">
+</head>
+<body>
+
+    <header>
+    <button class="drishtiButton">
+         <img class="drishti" src="./images/pe.png" alt="drishti gombe" width="75px">
+    </button>
+       
+    </header>
+
+    <div class="logBackground">
+        <div class="logContainer">
+            <div class="textBox" id="template">
+                <div class="day"></div>
+                <div class="operation"></div>
+                <div class="answer"></div>
+            </div>
+            
+        </div>
+        <button class="clear">clear Log</button>
+    </div>
+     
+    
+    <div class="historyContainer">
+        <button class="history">
+            <img src="./images/image-from-rawpixel-id-6258210-png.png" width="50px" class="historyImg" alt="picture of clock for the history">
+            <audio src="./images/clock-tick-101150.mp3" class="tickTock"></audio>
+        </button>
+    </div>
+         
+    
+    
+    <input type="text" id="inputText" class="displayOutput">
+
+    
+   
+    <div class="container">
+        <div class="numberContainer">
+            <div class="numberRow1">
+                <button class="erase">
+                <img src="./images/hg-3.svg" alt="erase" width="85px"> <audio src="./images/pencil-eraser-erasing-71215-VEED.mp3" class="eraseAudio"></audio> 
+                </button>
+
+                <button class="backspace"> 
+                    <img src="./images/21.svg" alt="backspace">
+                </button>
+
+                <button class="squareRoot">
+                    <img src="./images/square root.svg" alt="squareRoot">
+                </button>
+
+                <button class="divide">                
+                    <img src="./images/divide.svg" alt="divide">
+                </button>
+                
+               
+                
+        
+               
+
+            </div>
+            <div class="numberRow2">
+                <button class="one">               
+                     <img src="./images/1.svg" alt="one">
+                </button>
+                <button class="two">
+                   <img src="./images/2.svg" alt="two"> 
+                </button>
+                <button class="three">
+                    <img src="./images/3.svg" alt="three"><audio src="./images/heartbeat-01-brvhrtz-225058-[AudioTrimmer.com].mp3" class="beat"></audio>
+                </button>
+                <button class="multiply">
+                    <img src="./images/apple 1.svg" alt="multiply">
+                </button>
+                
+                
+                
+            </div>
+            <div class="numberRow3">
+                 <button class="four">
+                    <img src="./images/4.svg" alt="four">
+                 </button>
+                <button class="five">
+                    <img src="./images/5.svg" alt="five">
+                </button>
+                <button class="six">
+                    <img src="./images/6.svg" alt="six">
+                </button>
+                <button class="add">
+                    <img src="./images/plus.svg" alt="add">
+                </button>
+   
+            </div>
+            <div class="numberRow4">
+                <button class="seven">
+                   <img src="./images/7.svg" alt="seven"> 
+                </button>
+                <button class="eight">
+                    <img src="./images/8.svg" alt="eight">
+                </button>
+                <button class="nine">
+                    <img src="./images/9.svg" alt="nine">
+                </button>
+                <button class="minus">
+                    <img src="./images/minus.svg" alt="minus">
+                </button>
+                
+                
+                
+                
+            </div>
+             <div class="numberRow5">
+                <button class="point">
+                    <img src="./images/dot.svg" alt="point">
+                </button>
+                <button class="zero">
+                    <img src="./images/0.svg" alt="zero">
+                </button>
+                <button class="equal">
+                    <img src="./images/equals.svg" alt="equal">
+                </button>
+                
+                
+                
+             </div>
+        </div>
+    </div> 
+
+   
+    
+    
+    
+    <script>
+        
+        const erase = document.querySelector(".erase");
+        const eraseAudio = document.querySelector(".eraseAudio");
+        const backspace = document.querySelector(".backspace");
+        const squareRoot = document.querySelector(".squareRoot");
+        const divide = document.querySelector(".divide");
+        const one = document.querySelector(".one");
+        const two = document.querySelector(".two");
+        const three = document.querySelector(".three");
+        const four = document.querySelector(".four");
+        const five = document.querySelector(".five");
+        const six = document.querySelector(".six");
+        const seven = document.querySelector(".seven");
+        const eight = document.querySelector(".eight");
+        const nine = document.querySelector(".nine");
+        const zero = document.querySelector(".zero");
+        const multiply = document.querySelector(".multiply");
+        const add = document.querySelector(".add");
+        const minus = document.querySelector(".minus");
+        const equal = document.querySelector(".equal");
+        const beat= document.querySelector(".beat");
+        const point = document.querySelector(".point");
+        const displayOutput = document.querySelector(".displayOutput");
+        const drishti = document.querySelector(".drishti");
+        const body = document.querySelector("body");
+
+        const history= document.querySelector(".history");
+        const logContainer = document.querySelector(".logContainer");
+        const day = document.querySelector(".day");
+        const operation = document.querySelector(".operation");
+        const answer = document.querySelector(".answer");
+        const logBackground = document.querySelector(".logBackground");
+        const container = document.querySelector(".container")
+        const textBox = document.querySelector(".textBox");
+        const clear = document.querySelector(".clear");
+        const template = document.querySelector("#template");
+        const tickTock = document.querySelector(".tickTock");
+
+        erase.addEventListener("mouseover", ()=> {
+            eraseAudio.play();
+        });
+         erase.addEventListener("mouseleave", ()=> {
+            eraseAudio.pause();
+        });
+        
+        backspace.addEventListener("click", ()=> {}); 
+
+        squareRoot.addEventListener("click", ()=> {});
+
+        divide.addEventListener("click", ()=> {});
+
+        
+
+        three.addEventListener("mouseover", ()=> {
+            beat.play();
+        });
+         three.addEventListener("mouseleave", ()=> {
+            beat.pause();
+        });
+
+
+        history.addEventListener("mouseover", ()=> {
+            tickTock.play();
+        });
+         history.addEventListener("mouseleave", ()=> {
+            tickTock.pause();
+        });
+ 
+ 
+
+
+        one.addEventListener("click", ()=> {displayOutput.value += "1"});
+        two.addEventListener("click", ()=> {displayOutput.value += "2"});
+        three.addEventListener("click", ()=> {displayOutput.value += "3"});
+        four.addEventListener("click", ()=> {displayOutput.value += "4"});
+        five.addEventListener("click", ()=> {displayOutput.value += "5"});
+        six.addEventListener("click", ()=> {displayOutput.value += "6"});
+        seven.addEventListener("click", ()=> {displayOutput.value += "7"});
+        eight.addEventListener("click", ()=> {displayOutput.value += "8"});
+        nine.addEventListener("click", ()=> {displayOutput.value += "9"});
+        zero.addEventListener("click", ()=> {displayOutput.value += "0"});
+        point.addEventListener("click", ()=> {displayOutput.value += "."});
+
+
+    //core logic
+     add.addEventListener("click", ()=> {
+       displayOutput.value += "+";
+    });
+
+    minus.addEventListener("click", ()=> {
+       displayOutput.value += "-";
+    });
+
+    multiply.addEventListener("click", ()=> {
+       displayOutput.value += "*";
+    });
+
+    divide.addEventListener("click", ()=> {
+        displayOutput.value += "/";
+    });
+
+    squareRoot.addEventListener("click", () => {
+        const currentNumber = displayOutput.value;
+        displayOutput.value = `Math.sqrt(${currentNumber})`;
+    });
+
+   
+
+
+    function addition(x,y){
+        return x+y;
+    }
+
+    function subtract(x,y){
+        return x-y;
+    }
+
+    function multiplication(x,y){
+        return x*y;
+    }
+
+    function division(x,y){
+        return x/y;
+    }
+
+   
+
+
+
+     function logic(operator, num1, num2){
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        switch(operator){
+            case "+":
+                return addition(num1, num2);
+            
+            case "-":
+                return subtract(num1, num2);
+            
+            case "*":
+                return multiplication(num1, num2);
+
+            case "/":
+                return division(num1, num2);
+
+        }
+    } 
+        
+    equal.addEventListener("click", ()=> {
+        try{
+            const equation = displayOutput.value;
+            const result = eval(equation);
+            displayOutput.value = result;
+            let month = new Date().toLocaleString("default", {month:"long"}) + " " + new Date().getDate();
+            
+            
+            const newLogEntry = template.cloneNode(true);
+            newLogEntry.removeAttribute("id");
+            newLogEntry.querySelector(".day").textContent = month;
+            newLogEntry.querySelector(".operation").textContent = equation;
+            newLogEntry.querySelector(".answer").textContent = result;
+            newLogEntry.style.display = "block";
+            
+            logContainer.prepend(newLogEntry);
+
+
+            const savedLogs = JSON.parse(localStorage.getItem("calculatorHistory")) || [];
+            const newEntry = {day: month, operation: equation, answer: result}
+            savedLogs.unshift(newEntry);
+            localStorage.setItem("calculatorHistory", JSON.stringify(savedLogs));
+
+        }catch(error){
+            displayOutput.value = "Error";
+        };
+    });
+
+    erase.addEventListener("click", ()=>{
+        displayOutput.value = "";
+    });
+
+    backspace.addEventListener("click", ()=> {
+        let currentString = displayOutput.value;
+        displayOutput.value = currentString.slice(0,-1);
+    });  
+     
+    
+        
+
+   
+    textBox.style.display = "none";
+    
+    document.addEventListener("click", (event)=> {
+        const isVisible = logBackground.style.display ==="flex";
+        const isClickInside = logBackground.contains(event.target);
+        const ifClickOnHistoryButton = history.contains(event.target);
+        if (isVisible && !isClickInside && !ifClickOnHistoryButton){
+            logBackground.style.display = "none";
+        }
+    });
+
+    history.addEventListener("click", ()=> {
+            const isVisible = logBackground.style.display === "flex";
+            logBackground.style.display = isVisible ? "none" : "flex";
+        });
+
+
+    clear.addEventListener("click", ()=> {
+            const allLogs = logContainer.querySelectorAll(".textBox:not(#template)");
+            allLogs.forEach(log => log.remove());
+            localStorage.removeItem("calculatorHistory")
+        });
+
+
+
+    drishti.addEventListener("click", ()=> {location.reload()}
+    );
+
+
+    
+    window.addEventListener("DOMContentLoaded", ()=> {
+        if (template) {
+            template.style.display = "none";
+        }
+        const savedLogs = JSON.parse(localStorage.getItem("calculatorHistory")) || [];
+        savedLogs.forEach(entry => {
+            const newLogEntry = template.cloneNode(true);
+            newLogEntry.removeAttribute("id");
+            newLogEntry.querySelector(".day").textContent = entry.day;
+            newLogEntry.querySelector(".operation").textContent = entry.operation;
+            newLogEntry.querySelector(".answer").textContent = entry.answer;
+
+            newLogEntry.style.display = "block";
+            logContainer.appendChild(newLogEntry);
+            
+        });
+    } );
+
+  
+    
+    </script>
+
+
+</body>
+</html>
