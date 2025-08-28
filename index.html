@@ -340,6 +340,7 @@
     });
 
     history.addEventListener("click", ()=> {
+            tickTock.pause();
             const isVisible = logBackground.style.display === "flex";
             logBackground.style.display = isVisible ? "none" : "flex";
         });
