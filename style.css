@@ -21,6 +21,7 @@ header{
     flex-shrink: 0; 
     display: flex;
     cursor: url("./images/filled\ cursor.svg"), pointer;
+    margin-bottom: 30px;
 
 }
 
