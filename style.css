@@ -67,6 +67,7 @@ transition: transform 0.6s ease;
     font-style: normal;
     font-size: 25px;
     padding-left: 20px;
+    cursor: url("./images/input.svg"), default;
   
 }
 #inputText:focus{
