@@ -1,2 +1,4 @@
 # Calci
-made a calci
+The idea was to turn a mundane, everyday, expecting-nothing-different system into an "oh-didn't expect that" experince. To make a calculator is The Odin Project's last project in its foundation's syllabus. I started the TOD journey a few days over a year ago. I am so glad that I did. Anyways, when I thought of a digital calculator, i thought of something that looks like every other digital calculator that you have seen. so, I wanted to make one that didnt. the goal was a) to strenghten the marriage of my design skills and my new-found coding skills (currantly in the attemots of turning it from an arranged marriage to a loving one) b) to add atleast one more sense to it, hence the sound and enrich an existing sense; i want your eyes to wander through and around the numbers with curiosity; even a half-hearted one works c) ofcourse, was to make it fun-ctional.
+
+well, thats it have fun. here is the link:
